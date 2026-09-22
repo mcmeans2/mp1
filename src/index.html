@@ -1,13 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sailor Moon | Guardian Archives</title>
+  
+  <!-- external fonts & icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="main-header">
+    <nav id="navbar">
+      <div class="nav-brand">
+        <i class="fa-solid fa-moon"></i> Sailor Guardians
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#scouts" class="nav-link">Guardians</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#video-section" class="nav-link">Prologue</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="section hero-bg-fixed">
+    <div class="hero-content">
+      <h1>Moon Prism Power</h1>
+      <p>In the name of the moon, we will punish evil!</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>The Silver Millennium</h2>
+      <p class="section-desc">Reincarnated in modern Tokyo, the Sailor Guardians fight to defend the earth and find the legendary silver crystal.</p>
+      <button id="open-modal-btn">Guardian Manifesto</button>
+    </div>
+  </section>
+
+  <section id="scouts" class="section">
+    <div class="container">
+      <h2>Inner Senshi</h2>
+      <div class="scouts-grid">
+        <div class="col">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Sailor Jupiter</h3>
+          <p>Guardian of Protection: commanding the powers of lightning and nature with unmatched physical strength.</p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-water"></i>
+          <h3>Sailor Mercury</h3>
+          <p>Guardian of Wisdom: utilizing water, ice, and calculated tactics to outsmart enemies.</p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-fire"></i>
+          <h3>Sailor Mars</h3>
+          <p>Guardian of Passion: channeling the mystic fires and psychic insight of Hikawa shrine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2>Transformations</h2>
+      <div class="carousel-container" aria-roledescription="carousel" aria-live="polite">
+        <button class="carousel-arrow prev" id="carousel-prev" aria-label="Previous Slide">&#10094;</button>
+        <div class="carousel-track">
+          <div class="slide active">
+            <div class="slide-content">
+              <h3>Moon Cosmic Power</h3>
+              <p>Usagi calls upon the moon cosmic compact.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h3>Mercury Star Power</h3>
+              <p>Ami invokes the crystal swirling waters of Mercury.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h3>Mars Flame Sniper</h3>
+              <p>Rei summons the sacred fire bow of celestial purification.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-arrow next" id="carousel-next" aria-label="Next Slide">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="video-section" class="section">
+    <div class="container">
+      <h2>Archive Footage</h2>
+      <video controls width="640">
+      <!-- TODO: Find sailor moon theme song on youtube and convert to mp4 -->
+        <source src="./assets/sailor_moon.mp4" type="video/mp4" />
+         Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <div id="modal-backdrop" class="modal-backdrop hidden">
+    <div class="modal-box">
+      <button id="close-modal-btn" class="modal-close">&times;</button>
+      <h3>The Oath of the Moon Kingdom</h3>
+      <p>Guided by the moonlight, our duty is to preserve peace across the galaxy and safeguard the princess at all costs.</p>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="container">
+      <p>&copy; 2026 Sailor Guardians Network</p>
+      <div class="social-links">
+        <a href="https://www.youtube.com/watch?v=JYjDxZ_ct1o" target="_blank" rel="noopener noreferrer" aria-label="Moon Prism Power Transformation on Youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://en.wikipedia.org/wiki/Sailor_Moon" target="_blank" rel="noopener noreferrer" aria-label="Sailor Moon on Wikipedia"><i class="fa-brands fa-wikipedia-w"></i></a>
+        <a href="https://www.instagram.com/popular/sailor-moon-official-store/" target="_blank" rel="noopener noreferrer" aria-label="Sailor Moon Store on Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
