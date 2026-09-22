@@ -462,16 +462,28 @@ body {
   .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 24px;
+    margin-top: 16px;
 
     a {
-      color: $muted-text;
-      font-size: 1.3rem;
-      transition: color $transition-speed ease, transform $transition-speed ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(0, 229, 255, 0.05); 
+      color: $accent-cyan; 
+      font-size: 1.5rem;
+      border: 1px solid rgba(0, 229, 255, 0.3); 
+      transition: all $transition-speed cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 
       &:hover {
-        color: $accent-pink;
-        transform: translateY(-2px);
+        background: $accent-cyan;
+        color: #000000; 
+        border-color: $accent-cyan;
+        transform: translateY(-8px) scale(1.1);
+        box-shadow: 0 0 15px rgba(0, 229, 255, 0.6), 0 0 30px rgba(0, 229, 255, 0.3);
       }
     }
   }
