@@ -1,5 +1,4 @@
 /* Your SCSS here. */
-
 /* Variables */
 $primary-dark: #120d2b;
 $deep-navy: #1b1638;
@@ -118,15 +117,33 @@ body {
 }
 
 .nav-brand {
-  color: $accent-cyan;
+  color: $soft-white; 
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800; 
+  text-transform: uppercase;
+  letter-spacing: 2px; 
   display: flex;
   align-items: center;
-  gap: 10px;
-  transition: font-size $transition-speed ease;
+  gap: 12px;
+  transition: all $transition-speed ease;
+  
+  text-shadow:
+    0 0 8px rgba(0, 229, 255, 0.8),
+    0 0 16px rgba(0, 229, 255, 0.4),
+    4px 4px 10px rgba(179, 136, 255, 0.5); 
 
-  i { color: $accent-pink; }
+  &:hover {
+    transform: scale(1.02); 
+    text-shadow:
+      0 0 12px rgba(0, 229, 255, 1),
+      0 0 24px rgba(0, 229, 255, 0.6),
+      6px 6px 15px rgba(179, 136, 255, 0.7);
+  }
+
+  i {
+    color: $accent-pink;
+    text-shadow: 0 0 12px rgba(179, 136, 255, 0.8); 
+  }
 }
 
 .nav-links {
@@ -145,7 +162,7 @@ body {
     &:hover {
       color: $soft-white;
       background-color: rgba(255, 64, 129, 0.2);
-      text-shadow: 0 0 8px $accent-pink; /* Adds the neon glow on hover */
+      text-shadow: 0 0 8px $accent-pink; 
     }
 
     &.active {
@@ -396,7 +413,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; // just to be sure navbar is covered
+  z-index: 9999; // make sure navbar is covered
   opacity: 1;
   visibility: visible;
   transition: opacity $transition-speed ease, visibility $transition-speed ease;
